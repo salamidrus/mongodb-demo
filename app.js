@@ -27,7 +27,9 @@ db.once("open", () => console.log("Connected to MongoDB"));
 // routes
 const errorHandler = require("./middlewares/errorHandler");
 const userRoutes = require("./routes/user");
+const profileRoutes = require("./routes/profile");
 app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/profile", profileRoutes);
 app.use(errorHandler);
 
 let PORT = 3000 || process.env.PORT;
