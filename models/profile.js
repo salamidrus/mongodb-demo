@@ -6,8 +6,6 @@ const profileSchema = new Schema(
     age: {
       type: Number,
       required: true,
-      lowercase: true,
-      trim: true,
     },
     user: { type: Schema.Types.ObjectId, ref: "User" },
   },
